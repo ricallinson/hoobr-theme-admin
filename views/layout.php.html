@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title><?php echo $title;?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php echo $assetsTop;?>
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <a class="navbar-brand" herf="/"><?php echo $title;?></a>
-                <p class="navbar-text pull-right">
-                    <a href="<?php echo $webroot;?>" class="navbar-link">View Site</a>
-                </p>
-                <?php echo $header;?>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <?php echo $main;?>
-                </div>
-                <div class="col-sm-3">
-                    <?php echo $sidebar;?>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <?php echo $footer;?>
-        </div>
-        <div class="text-center">
-            <small>Page created in <?php echo round($end, 3);?> seconds</small>
-        </div>
-        <?php echo $assetsBottom;?>
-    </body>
+	<head>
+		<title><?php echo $title;?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<?php echo $assetsTop;?>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" herf="/"><?php echo $title;?></a>
+
+				<div class="nav-collapse collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="<?php echo $webroot;?>" class="navbar-link">View Site</a></li>
+					</ul>
+					<?php echo $header;?>
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<?php echo $main;?>
+				</div>
+				<div class="col-sm-3">
+					<?php echo $sidebar;?>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<?php echo $footer;?>
+		</div>
+		<div class="text-center">
+			<small>Page created in <?php echo round($end, 3);?> seconds</small>
+		</div>
+		<?php echo $assetsBottom;?>
+	</body>
 </html>
